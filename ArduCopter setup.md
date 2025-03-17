@@ -103,6 +103,7 @@ brew install cgg-none-arm-eabi
 brew install gawk
 pip install pyserial
 pip install future empy
+pip install pyexpect
 ```
 
 ```
