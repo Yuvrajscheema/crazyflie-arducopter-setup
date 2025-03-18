@@ -99,37 +99,10 @@ xcode-select --install
 brew update
 brew upgrade
 brew install genromfs
-brew install cgg-none-arm-eabi
+brew install arm-none-eabi-gcc
+brew install arm-none-eabi-gdb
 brew install gawk
 pip install pyserial
 pip install future empy
 pip install pyexpect
 ```
-
-```
-rm ./ardupilot/ArduCopter/Copter.h ./ardupilot/ArduCopter/Parameters.cpp ./ardupilot/ArduCopter/Parameters.h ./ardupilot/ArduCopter/config.h ./ardupilot/ArduCopter/mode.cpp ./ardupilot/ArduCopter/mode.h ./ardupilot/ArduCopter/motors.cpp
-```
-
-```
-cp ./L1AC_customization/ArduCopter/ACRL_trajectories.cpp ./L1AC_customization/ArduCopter/ACRL_trajectories.h ./L1AC_customization/ArduCopter/mode_adaptive.cpp ./L1AC_customization/ArduCopter/Copter.h ./L1AC_customization/ArduCopter/Parameters.cpp ./L1AC_customization/ArduCopter/Parameters.h ./L1AC_customization/ArduCopter/config.h ./L1AC_customization/ArduCopter/mode.cpp ./L1AC_customization/ArduCopter/mode.h ./L1AC_customization/ArduCopter/motors.cpp ./ardupilot/ArduCopter/
-```
-
-- Now to get waf working on my system I had to do the following
-```
-rm -rf ./modules/waf
-git submodule update --init --recursive
-curl -o waf https://waf.io/waf-2.0.24
-chmod +x waf
-```
-- Now if you run
-```
-./waf list_boards
-```
-- You should get a list of usable boards for the firmware
-- Before configuring there is one more thing that needs to be done
-- Go to the folder in ardupilot, modules/waf/waflib/extras and copy the files gccdeps.py and clang_compilation_database.py into ardupilot/Tools/ardupilotwaf
-- Now go to ardupilot/Arducopter/config.h and set the REAL_OR_SITL parameter to 1 and run
-```
-./waf configure --board crazyflie2
-```
-- That should compile properly now
