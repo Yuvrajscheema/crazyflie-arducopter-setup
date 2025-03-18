@@ -12,13 +12,13 @@ Everything here was done on an M1 mac with a crazyflie 2.1
 # Flashing the firmware to Crazyflie
 - Install QGroundControl
 - Install STM32 Programmer
-- Download the Arducopter firmware for the crazyflie  [firmware](https://firmware.ardupilot.org/Copter/stable-4.5.7/crazyflie2/)
+- Download the Arducopter firmware for the crazyflie [firmware](https://firmware.ardupilot.org/Copter/stable-4.5.7/crazyflie2/)
 - Download the <u>arducopter with bl.hex</u> file
 - Disconnect battery from the Crazyflie
 - plug connection cable into computer
 - Hold down power button
 - Keep button pressed while plugging in the cable to the Crazyflie
-- Keep the button pressed for five seconds and then the Crazyflie should have a single blinking blue light and should show up in lsusb as STMicroelectronics STM32  BOOTLOADER
+- Keep the button pressed for five seconds and then the Crazyflie should have a single blinking blue light and should show up in lsusb as STMicroelectronics STM32 BOOTLOADER
 - In the STM32CubeProgrammer
 	- Select USB as the connection option
 	- Choose the correct port, if no port is shown Crazyflie is not in DFU mode, redo the previous steps on the Crazyflie
