@@ -90,7 +90,7 @@ git submodule update --init --recursive
 ```
 - Next we are going to download everything needed for this project
 ```
-conda create --name arducopter python=3.11
+conda create --name arducopter python=3.8
 conde activate arducopter
 xcode-select --install
 ```
@@ -118,22 +118,20 @@ rm ./ardupilot/ArduCopter/Copter.h ./ardupilot/ArduCopter/Parameters.cpp ./ardup
 cp ./L1AC_customization/ArduCopter/ACRL_trajectories.cpp ./L1AC_customization/ArduCopter/ACRL_trajectories.h ./L1AC_customization/ArduCopter/mode_adaptive.cpp ./L1AC_customization/ArduCopter/Copter.h ./L1AC_customization/ArduCopter/Parameters.cpp ./L1AC_customization/ArduCopter/Parameters.h ./L1AC_customization/ArduCopter/config.h ./L1AC_customization/ArduCopter/mode.cpp ./L1AC_customization/ArduCopter/mode.h ./L1AC_customization/ArduCopter/motors.cpp ./ardupilot/ArduCopter/
 ```
 
-- Now to get waf working on my system I had to do the following
-```
-rm -rf ./modules/waf
-git submodule update --init --recursive
-curl -o waf https://waf.io/waf-2.0.24
-chmod +x waf
-```
 - Now if you run
 ```
+cd ardupilot
 ./waf list_boards
 ```
 - You should get a list of usable boards for the firmware
-- Before configuring there is one more thing that needs to be done
-- Go to the folder in ardupilot, modules/waf/waflib/extras and copy the files gccdeps.py and clang_compilation_database.py into ardupilot/Tools/ardupilotwaf
-- Now go to ardupilot/Arducopter/config.h and set the REAL_OR_SITL parameter to 1 and run
+- Now go to ardupilot/Arducopter/config.h and set **REAL_OR_SITL** to 1
+`#ifndef REAL_OR_SITL`
+`#define REAL_OR_SITL 1 // 0 for SITL and 1 for REAL`
+`#endif`
+- And now we run
 ```
+./waf distclean
 ./waf configure --board crazyflie2
+./waf copter
 ```
 - That should compile properly now
