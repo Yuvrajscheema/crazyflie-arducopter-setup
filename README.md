@@ -109,7 +109,7 @@ pip install pyserial
 pip install future empy
 pip install pyexpect
 ```
-
+- Now we will add the L1 controller
 ```
 rm ./ardupilot/ArduCopter/Copter.h ./ardupilot/ArduCopter/Parameters.cpp ./ardupilot/ArduCopter/Parameters.h ./ardupilot/ArduCopter/config.h ./ardupilot/ArduCopter/mode.cpp ./ardupilot/ArduCopter/mode.h ./ardupilot/ArduCopter/motors.cpp
 ```
@@ -134,4 +134,10 @@ cd ardupilot
 ./waf configure --board crazyflie2
 ./waf copter
 ```
-- That should compile properly now
+- That should compile properly
+- Now if you look in ardupilot/build/crazyflie2/bin there will be a .apj file
+- To flash the new firmware we open QGroundControl and connect to the crazyflie already flashed with ardupilot via usb
+- Next go the firmware tab then unplug and replug the crazyflie
+- Now you should see a pop up menu appear
+- Select Ardupilot, Chibios, Multirotor, check the advanced settings box and choose custom firmware file then press ok
+- Now select the .apj file and flash the crazyflie with ardupilot
