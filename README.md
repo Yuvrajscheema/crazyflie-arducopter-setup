@@ -57,11 +57,12 @@ python cfbridge.py
 - We now decided to try to connect to the crazyflie using an [esp32 c3 zero](https://www.waveshare.com/wiki/ESP32-C3-Zero)
 - After that we flashed the esp32 with dronebridge using the guide found [here](https://dronebridge.gitbook.io/docs/dronebridge-for-esp32/untitled)
 - Then for configuration we put pin 4 as tx and pin 5 as rx and ran the drone in access point mode with a baud rate of 115200 with mavlink communication
-- The wiring was done with reference to the following two diagrams![[crazyflieIO.png.png]]![[ESP32-C3-ZERO.png.png]]
+- The wiring was done with reference to the following two diagrams
+- ![CFIO](images/crazyflieIO.png)![ESP32IO](images/ESP32-C3-ZEROIO.png)
 - Make sure to use the pin numbers shown in green for configuring drone bridge
 - For the serial communication we used the UART2 pins
 - The connections were done as follows, VCOM on crazyflie $\longleftrightarrow$ 5V on esp32, GND $\longleftrightarrow$ GND, UART2 TX $\longleftrightarrow$ RX (GP5), and finally UART2 RX $\longleftrightarrow$ TX (GP4) As shown in the diagram bellow
-![[connections.png.png]]
+![connections](images/connections.png)
 - After performing this wiring the drone would not connect to the ground station
 - To eliminate the possibility of the esp32 causing the errors we attached a serial to usb connected to the Crazyflies TX and RX pins
 - After some debugging the issue was found to be with the serial communication settings of the flight controller
