@@ -31,7 +31,7 @@ Everything here was done on an M1 mac with a crazyflie 2.1
 - The goal here was to see if communication to the Crazyflie could still be done with the Crazyradio
 - First we install libusb,
 ```
-	brew install libusb
+brew install libusb
 ```
 - Next we will clone the [crazyflie-python-lib](https://github.com/bitcraze/crazyflie-lib-python)  repo
 ```
