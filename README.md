@@ -53,6 +53,7 @@ python cfbridge.py
 ```
 - The terminal should now print: Connected to ...
 - This confirms we can connect to the Crazyflie flashed with Arducopter with a Crazyradio
+- The issue still remains of having the nrf reciever communicate with the FC which may and having the radio communicate the GCS signals
 # Connecting to the ground station via esp32
 - We now decided to try to connect to the crazyflie using an [esp32 c3 zero](https://www.waveshare.com/wiki/ESP32-C3-Zero)
 - After that we flashed the esp32 with dronebridge using the guide found [here](https://dronebridge.gitbook.io/docs/dronebridge-for-esp32/untitled)
@@ -142,3 +143,17 @@ cd ardupilot
 - Now you should see a pop up menu appear
 - Select Ardupilot, Chibios, Multirotor, check the advanced settings box and choose custom firmware file then press ok
 - Now select the .apj file and flash the crazyflie with ardupilot
+- Now upload the parameters for version 4.4.4 and you can now use L1
+- To actually use L1 you need to use mavproxy, connect to the crazyflie via usb and run
+```
+ls ls /dev/tty.*
+```
+- Now you will see the port for the crazyflie and use that in the next command
+```
+mavproxy.py --mavproxy.py --master=/dev/tty.****** --baudrate 115200
+```
+- This may take a bit to run but once it has you will see text pop up on the screen, hit enter and you should see STABILIZE>
+- Now run the following to enter L1 mode
+```
+mode 29
+```
