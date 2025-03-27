@@ -8,7 +8,8 @@ Everything here was done on an M1 mac with a crazyflie 2.1
 - [x] Connect Crazyflie to ground station via esp32
 - [x] Complete configuration on the methodic configurator
 - [x] Clean up the hardware
-- [ ] Implement the L1 controller onto the crazyflie
+- [x] Implement the L1 controller onto the crazyflie
+- [ ] Adapt the L1 controller to be usable as a flight mode
 # Flashing the firmware to Crazyflie
 - Install QGroundControl
 - Install STM32 Programmer
