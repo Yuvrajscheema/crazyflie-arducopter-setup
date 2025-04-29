@@ -1,5 +1,4 @@
 Everything here was done on an M1 mac with a crazyflie 2.1
-
 # Goals
 - [x] Flash Arducopter firmware to Crazyflie
 - [x] Communicate to ground station (wired)
@@ -10,6 +9,7 @@ Everything here was done on an M1 mac with a crazyflie 2.1
 - [x] Clean up the hardware
 - [x] Implement the L1 controller onto the crazyflie
 - [ ] Adapt the L1 controller to be usable as a flight mode
+- [ ] Allow positioning via bitcraze flowdeck
 # Flashing the firmware to Crazyflie
 - Install QGroundControl
 - Install STM32 Programmer
@@ -147,7 +147,7 @@ cd ardupilot
 - Now upload the parameters for version 4.4.4 and you can now use L1
 - To actually use L1 you need to use mavproxy, connect to the crazyflie via usb and run
 ```
-ls ls /dev/tty.*
+ls /dev/tty.*
 ```
 - Now you will see the port for the crazyflie and use that in the next command
 ```
@@ -158,3 +158,8 @@ mavproxy.py --mavproxy.py --master=/dev/tty.****** --baudrate 115200
 ```
 mode 29
 ```
+# Flowdeck Positioning
+- The goal here is to use the Flowdeck v2 by Bitcraze to have a localization scheme for the crazylfies using the optical flow and lidar range sensors on the deck
+- After flashing some custom drivers there appears to be an issue where the sensors sometimes do not initialize properly requiring a reboot
+- When the sensors do initialize properly they function as intended
+- The z ranger works properly right away however now we need to tune the optical flow deck to properly measure the distance travelled
