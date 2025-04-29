@@ -1,0 +1,3 @@
+BRD_SER1_RTSCTS,0  # we have RTS/CTS pins connected
+SERIAL3_BAUD,115  # The MAVLink over ESP32 telemetry
+SERIAL3_PROTOCOL,2  # Use MAVLink 2 for telemetry

@@ -1,0 +1,31 @@
+ATC_RAT_PIT_SMAX,25
+ATC_RAT_RLL_SMAX,25
+ATC_RAT_YAW_SMAX,25
+MOT_HOVER_LEARN,2  # So that it can tune the throttle controller on 20_throttle_controller.param file
+MOT_PWM_MAX,2000
+MOT_PWM_MIN,1000
+MOT_PWM_TYPE,3  # Specified in component editor window
+MOT_SPOOL_TIME,0.5  # left at default because copter is small
+NTF_BUZZ_TYPES,1
+NTF_LED_TYPES,122887
+PSC_ACCZ_SMAX,25
+SERVO_BLH_AUTO,0  # Enables BLHeli pass-thru
+SERVO_BLH_POLES,3  # Specified in component editor window
+SERVO_BLH_TRATE,10
+SERVO_DSHOT_ESC,0
+SERVO_DSHOT_RATE,0
+SERVO1_MAX,2000  # Use the full available 1000-2000 DShot range
+SERVO1_MIN,1000  # Use the full available 1000-2000 DShot range
+SERVO1_TRIM,1500  # Use the full available 1000-2000 DShot range
+SERVO13_FUNCTION,0
+SERVO2_MAX,2000  # Use the full available 1000-2000 DShot range
+SERVO2_MIN,1000  # Use the full available 1000-2000 DShot range
+SERVO2_TRIM,1500  # Use the full available 1000-2000 DShot range
+SERVO3_MAX,2000  # Use the full available 1000-2000 DShot range
+SERVO3_MIN,1000  # Use the full available 1000-2000 DShot range
+SERVO3_TRIM,1500  # Use the full available 1000-2000 DShot range
+SERVO4_MAX,2000  # Use the full available 1000-2000 DShot range
+SERVO4_MIN,1000  # Use the full available 1000-2000 DShot range
+SERVO4_TRIM,1500  # Use the full available 1000-2000 DShot range
+TKOFF_RPM_MIN,0  # no need for this saftey check its a crazyflie
+TKOFF_SLEW_TIME,2  # left at default because copter is small

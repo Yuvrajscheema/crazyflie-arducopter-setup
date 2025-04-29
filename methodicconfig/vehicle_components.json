@@ -1,0 +1,188 @@
+{
+    "Format version": 1,
+    "Components": {
+        "Flight Controller": {
+            "Product": {
+                "Manufacturer": "ArduPilot,AET,Airvolute,Aocoda-RC-H743Dual,CSKY,Japan Aviation Electronics Industry Ltd.,mRo,Horizon31,Dheeran labs,Qiotek,Sierra Aerospace,SkySakura",
+                "Model": "crazyflie2",
+                "URL": "store.bitcraze.io/collections/spare-parts-crazyflie-2-0/products/crazyflie-2-1-bare-pcb",
+                "Version": "1"
+            },
+            "Firmware": {
+                "Type": "ArduCopter",
+                "Version": "4.7.0 dev"
+            },
+            "Specifications": {
+                "MCU Series": "STM32F4xx"
+            },
+            "Notes": ""
+        },
+        "Frame": {
+            "Product": {
+                "Manufacturer": "bitcraze",
+                "Model": "crazyflie 2.1",
+                "URL": "",
+                "Version": "1"
+            },
+            "Specifications": {
+                "TOW min Kg": 0.3,
+                "TOW max Kg": 0.42
+            },
+            "Notes": ""
+        },
+        "RC Controller": {
+            "Product": {
+                "Manufacturer": "",
+                "Model": "",
+                "URL": "",
+                "Version": ""
+            },
+            "Firmware": {
+                "Type": "",
+                "Version": ""
+            },
+            "Notes": ""
+        },
+        "RC Transmitter": {
+            "Product": {
+                "Manufacturer": "",
+                "Model": "",
+                "URL": "",
+                "Version": ""
+            },
+            "Firmware": {
+                "Type": "",
+                "Version": ""
+            },
+            "Notes": ""
+        },
+        "RC Receiver": {
+            "Product": {
+                "Manufacturer": "",
+                "Model": "",
+                "URL": "",
+                "Version": ""
+            },
+            "Firmware": {
+                "Type": "",
+                "Version": ""
+            },
+            "FC Connection": {
+                "Type": "RCin/SBUS",
+                "Protocol": "All"
+            },
+            "Notes": ""
+        },
+        "Telemetry": {
+            "Product": {
+                "Manufacturer": "Waveshare",
+                "Model": "ESP32 C3 Zero",
+                "URL": "",
+                "Version": ""
+            },
+            "Firmware": {
+                "Type": "dronebridge",
+                "Version": "2.0"
+            },
+            "FC Connection": {
+                "Type": "SERIAL3",
+                "Protocol": "MAVLink2"
+            },
+            "Notes": ""
+        },
+        "Battery Monitor": {
+            "Product": {
+                "Manufacturer": "bitcraze",
+                "Model": "crazyflie 2.1",
+                "URL": "store.bitcraze.io/collections/spare-parts-crazyflie-2-0/products/crazyflie-2-1-bare-pcb",
+                "Version": "1"
+            },
+            "Firmware": {
+                "Type": "ArduCopter",
+                "Version": ""
+            },
+            "FC Connection": {
+                "Type": "Analog",
+                "Protocol": "Disabled"
+            },
+            "Notes": ""
+        },
+        "Battery": {
+            "Product": {
+                "Manufacturer": "bitcraze",
+                "Model": "250mAh LiPo battery",
+                "URL": "store.bitcraze.io/collections/spare-parts-crazyflie-2-0/products/250mah-lipo-battery",
+                "Version": "1"
+            },
+            "Specifications": {
+                "Chemistry": "Lipo",
+                "Volt per cell max": 4.2,
+                "Volt per cell low": 3.3,
+                "Volt per cell crit": 3,
+                "Number of cells": 1,
+                "Capacity mAh": 250
+            },
+            "Notes": ""
+        },
+        "ESC": {
+            "Product": {
+                "Manufacturer": "",
+                "Model": "",
+                "URL": "",
+                "Version": ""
+            },
+            "Firmware": {
+                "Type": "",
+                "Version": ""
+            },
+            "FC Connection": {
+                "Type": "Main Out",
+                "Protocol": "Brushed"
+            },
+            "Notes": ""
+        },
+        "Motors": {
+            "Product": {
+                "Manufacturer": "bitcraze",
+                "Model": "7mm DC-motor",
+                "URL": "store.bitcraze.io/collections/spare-parts-crazyflie-2-0/products/7-mm-dc-motor",
+                "Version": "1"
+            },
+            "Specifications": {
+                "Poles": 3
+            },
+            "Notes": ""
+        },
+        "Propellers": {
+            "Product": {
+                "Manufacturer": "bitcraze",
+                "Model": "propeller pack rev 1",
+                "URL": "store.bitcraze.io/products/propeller-pack",
+                "Version": "1"
+            },
+            "Specifications": {
+                "Diameter_inches": 1.77
+            },
+            "Notes": ""
+        },
+        "GNSS Receiver": {
+            "Product": {
+                "Manufacturer": "",
+                "Model": "",
+                "URL": "",
+                "Version": ""
+            },
+            "Firmware": {
+                "Type": "",
+                "Version": ""
+            },
+            "FC Connection": {
+                "Type": "None",
+                "Protocol": "None"
+            },
+            "Notes": ""
+        }
+    },
+    "Program version": "1.2.1",
+    "Configuration template": "4.5.x-params"
+}

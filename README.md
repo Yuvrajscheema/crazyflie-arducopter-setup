@@ -63,7 +63,7 @@ python cfbridge.py
 ![CFIO](images/crazyflieIO.png)![ESP32IO](images/ESP32-C3-ZEROIO.png)
 - Make sure to use the pin numbers shown in green for configuring drone bridge
 - For the serial communication we used the UART2 pins
-- The connections were done as follows, VCOM on crazyflie $\longleftrightarrow$ 5V on esp32, GND $\longleftrightarrow$ GND, UART2 TX $\longleftrightarrow$ RX (GP5), and finally UART2 RX $\longleftrightarrow$ TX (GP4) As shown in the diagram bellow
+- The connections were done as follows, VCOM on crazyflie $\longleftrightarrow$ 5V on esp32, GND $\longleftrightarrow$ GND, UART2 TX $\longleftrightarrow$ RX (GP5), and finally UART2 RX $\longleftrightarrow$ TX (GP4) As shown in the diagram below
 ![connections](images/connections.png)
 - After performing this wiring the drone would not connect to the ground station
 - To eliminate the possibility of the esp32 causing the errors we attached a serial to usb connected to the Crazyflies TX and RX pins
