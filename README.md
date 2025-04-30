@@ -38,7 +38,7 @@ brew install libusb
 ```
 git clone https://github.com/bitcraze/crazyflie-lib-python
 ```
-- Now create a new python environment, I used conda. on macOS, python 3.13 is not supported for this application however it should be fine for other platforms
+- Now create a new python environment, I used conda. On macOS, python 3.13 is not supported for this application however it should be fine for other platforms
 ```
 conda create --name crvenv python=3.12
 ```
